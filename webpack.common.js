@@ -32,6 +32,11 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
     }),
+    new Dotenv({
+      path: path.resolve(__dirname, '.env'),
+      systemvars: true,
+      safe: true,
+    }),
     new CopyWebpackPlugin({
       patterns: [
         {
